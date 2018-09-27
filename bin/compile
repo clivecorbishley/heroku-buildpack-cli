@@ -37,5 +37,6 @@ EOF
 chmod +x "$BUILD_DIR/.profile.d/heroku-cli.sh"
 
 "$BUILD_DIR/.heroku/bin/heroku" version
+printenv
 $BUILD_DIR/.heroku/bin/heroku config:set HOST_NAME=${HEROKU_APP_NAME} HOST_ASSETS_BASE=https://${HEROKU_APP_NAME}.herokuapp.com --app ${HEROKU_APP_NAME};
 puts_step "Heroku CLI installation done"
